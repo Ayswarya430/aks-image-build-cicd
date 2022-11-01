@@ -14,10 +14,12 @@ jobs:
 
 
     steps:
-      - name: ACR build
-        id: acr
-        uses: azure/acr-build@v1
-        with:
+     - name: Checkout code
+       uses: actions/checkout@v3
+     - name: ACR build
+       id: acr
+       uses: azure/acr-build@v1
+       with:
           service_principal: "service_principal_name"
           service_principal_password: "Zgj8Q~u2_LErctPkOuJ03Ghcv31EIqUkwwOkZb2U",
           tenant: "d110c826-4e7b-4e0b-9090-2e63efaa6945"
